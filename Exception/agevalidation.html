@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Age Validation</title>
+</head>
+<body>
+
+    <h2>Age Validation</h2>
+
+    <input type="number" id="age" placeholder="Enter your age">
+    <button onclick="checkAge()">Check</button>
+
+    <p id="message"></p>
+
+    <script>
+        function checkAge() {
+            let age = parseInt(document.getElementById("age").value);
+
+            try {
+                if (age < 0) {
+                    throw new Error("Invalid age");
+                }
+
+                if (age < 18) {
+                    throw new Error("You are not eligible");
+                }
+
+                document.getElementById("message").innerHTML = "Eligible to vote";
+
+            } catch (error) {
+                document.getElementById("message").innerHTML = "Error: " + error.message;
+            }
+        }
+    </script>
+
+</body>
+</html>

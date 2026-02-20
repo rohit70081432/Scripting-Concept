@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head> 
+    <title>Rectangle Program</title>
+</head>
+<body>
+  
+
+    <script>
+        class Rectangle {
+            constructor(l, w) {
+                this.l = l;
+                this.w = w;
+            }
+
+            calculateArea() {
+                return this.l * this.w;
+            }
+
+            calculatePerimeter() {
+                return 2 * (this.l + this.w);
+            }
+        }
+
+        let l = parseInt(prompt("Enter Length:"));
+        let w = parseInt(prompt("Enter Width:"));
+
+        const myRectangle = new Rectangle(l, w);
+
+        console.log("Length:", myRectangle.l);
+        console.log("Width:", myRectangle.w);
+        console.log("Area:", myRectangle.calculateArea());
+        console.log("Perimeter:", myRectangle.calculatePerimeter());
+    </script>
+</body>
+</html>

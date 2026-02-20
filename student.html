@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <title>Student Class Program</title>
+    
+</head>
+<body>
+
+
+    <script>
+        class Student {
+            setDetails(name, roll, marks) {
+                this.name = name;
+                this.roll = roll;
+                this.marks = marks;
+            }
+
+            display() {
+                console.log("Name:", this.name);
+                console.log("Roll No:", this.roll);
+                console.log("Marks:", this.marks);
+            }
+        }
+
+      
+        let name = prompt("Enter Student Name:");
+        let roll = parseInt(prompt("Enter Roll Number:"));
+        let marks = parseInt(prompt("Enter Marks:"));
+
+        let s1 = new Student();
+        s1.setDetails(name, roll, marks);
+
+        s1.display();
+    </script>
+</body>
+</html>

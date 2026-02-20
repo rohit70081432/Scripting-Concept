@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+function calculateMean(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum / arr.length;
+}
+
+function calculateMax(arr) {
+    let max = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    return max;
+}
+
+function calculateMedian(arr) {
+    arr.sort(function(a, b) { return a - b; });
+    let mid = Math.floor(arr.length / 2);
+
+    if (arr.length % 2 === 0) {
+        return (arr[mid - 1] + arr[mid]) / 2;
+    } else {
+        return arr[mid];
+    }
+}
+
+// User Input
+let n = parseInt(prompt("Enter number of elements"));
+let arr = [];
+
+for (let i = 0; i < n; i++) {
+    arr[i] = parseInt(prompt("Enter element " + (i + 1)));
+}
+
+// Function Calls
+document.write("Array: " + arr + "<br>");
+document.write("Mean: " + calculateMean(arr) + "<br>");
+document.write("Maximum: " + calculateMax(arr) + "<br>");
+document.write("Median: " + calculateMedian(arr));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electricity Bill Calculator</title>
+</head>
+<body>
+
+<script>
+    let Bill = 0;
+    let units = parseInt(prompt("Enter Units"));
+
+    if (units <= 100) {
+        Bill = units * 1;
+
+    } else if (units <= 200) {
+        Bill = (100 * 1) + (units - 100) * 2;
+
+    } else {
+        Bill = (100 * 1) + (100 * 2) + (units - 200) * 3;
+    }
+
+    document.write("Total Bill = " + Bill);
+</script>
+
+</body>
+</html>
