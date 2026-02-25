@@ -5,7 +5,7 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-// Class
+
 class Student {
   name: string;
   marks: number;
@@ -40,7 +40,7 @@ class Student {
   }
 }
 
-// Function
+
 function startApp(): void {
   rl.question("Enter student name: ", (name) => {
     rl.question("Enter marks: ", (marksInput) => {
@@ -58,5 +58,6 @@ function startApp(): void {
     });
   });
 }
+
 
 startApp();
